@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festivite - Crie convites digitais personalizados</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <section class="formulario">
+        <h1>Crie seu convite</h1>
+        <form>
+          <fieldset class="sobre-evento">
+            <legend>Sobre o evento</legend>
+
+            <div class="input-group">
+              <label for="titulo">Título</label>
+              <input type="text" id="titulo" name="titulo" placeholder="Nome do evento" required>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label for="data-inicio">Início</label>
+                <input type="text" id="data-inicio" name="data-inicio" placeholder="DD/MM/AAAA, --:--" required>
+              </div>
+            
+              <div class="input-group">
+                <label for="data-fim">Fim</label>
+                <input type="text" id="data-fim" name="data-fim" placeholder="DD/MM/AAAA, --:--" required>
+              </div>
+            </div>
+
+            <div class="input-row">
+              <div class="input-group">
+                <label>Tipo do evento</label>
+                <div class="radio-group">
+                  <input type="radio" id="presencial" name="tipo" value="presencial" required>
+                  <label for="presencial"></label>
+            
+                  <input type="radio" id="online" name="tipo" value="online" required>
+                  <label for="online"></label>
+                </div>
+              </div>
+            
+              <div class="input-group">
+                <label for="local">Local</label>
+                <input type="text" id="local" name="local" placeholder="Link ou endereço" required>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="descricao">Descrição</label>
+              <textarea id="descricao" name="descricao" rows="4" placeholder="Escreva sobre os detalhes do evento"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Personalização</legend>
+            <!-- TODO: Campos do evento -->
+          </fieldset>
+
+          <fieldset>
+            <legend>Dados para contato</legend>
+            <!-- TODO: Campos do evento -->
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="preview">
+        <img src="assets/Background.png" alt="preview de um convite personalizado" class="preview-background">
+        <img src="assets/icons/confetesicon.svg" alt="Ícone de confetes" class="confetes-icon">
+        <h1 class="preview-title">Festivite</h1>
+        <p class="preview-subtitle">Crie convites digitais para o seu evento</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

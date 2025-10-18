@@ -1,0 +1,38 @@
+/* ========================================
+   RESET E VARIÁVEIS CSS
+   ======================================== */
+
+/* Reset básico para remover estilos padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis CSS - Design System */
+:root {
+  /* Cores do design system */
+  --brand-light: #59B2FF;
+  --brand-mid: #3487CF;
+  --brand-dark: #1D6FB6;
+  
+  --text-heading: #F9F9F9;
+  --text-body: #C8CDD0;
+  --input-placeholder: #869198;
+  
+  --shape-background: #131516;
+  --shape-body: #212427;
+  --input-base: #1C1F21;
+  --input-stroke: #363840;
+  
+  --danger: #FF5959;
+  --pink: #FF598B;
+}
+
+/* Configurações do body */
+body {
+  background-color: var(--shape-background);
+  color: var(--text-body);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
