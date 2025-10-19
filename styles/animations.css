@@ -1,0 +1,24 @@
+/* Animações e efeitos */
+
+/* Focus com cores RGB */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #00D4AA; /* Cor inicial */
+  box-shadow: 0 0 0 2px rgba(0, 212, 170, 0.15);
+  transition: all 0.3s ease;
+  animation: rainbow-border 3s ease-in-out infinite; /* Animação contínua */
+}
+
+
+/* Animação arco-íris para inputs */
+@keyframes rainbow-border {
+  0% { border-color: #FF6B6B; box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.15); }
+  16% { border-color: #FF8E53; box-shadow: 0 0 0 2px rgba(255, 142, 83, 0.15); }
+  33% { border-color: #FFD93D; box-shadow: 0 0 0 2px rgba(255, 217, 61, 0.15); }
+  50% { border-color: #6BCF7F; box-shadow: 0 0 0 2px rgba(107, 207, 127, 0.15); }
+  66% { border-color: #4D96FF; box-shadow: 0 0 0 2px rgba(77, 150, 255, 0.15); }
+  83% { border-color: #9B59B6; box-shadow: 0 0 0 2px rgba(155, 89, 182, 0.15); }
+  100% { border-color: #FF6B6B; box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.15); }
+}
+

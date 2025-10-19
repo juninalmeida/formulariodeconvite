@@ -29,7 +29,7 @@
                 <label for="data-inicio">Início</label>
                 <input type="text" id="data-inicio" name="data-inicio" placeholder="DD/MM/AAAA, --:--" required>
               </div>
-            
+              
               <div class="input-group">
                 <label for="data-fim">Fim</label>
                 <input type="text" id="data-fim" name="data-fim" placeholder="DD/MM/AAAA, --:--" required>
@@ -39,15 +39,22 @@
             <div class="input-row">
               <div class="input-group">
                 <label>Tipo do evento</label>
-                <div class="radio-group">
+                <div class="segmented-control">
                   <input type="radio" id="presencial" name="tipo" value="presencial" required>
-                  <label for="presencial"></label>
-            
+                  <label for="presencial" class="segment-button">
+                    <img src="assets/icons/on.png" alt="Presencial" class="segment-icon">
+                    Presencial
+                  </label>
+
                   <input type="radio" id="online" name="tipo" value="online" required>
-                  <label for="online"></label>
+                  <label for="online" class="segment-button">
+                    <img src="assets/icons/video.png" alt="Online" class="segment-icon online-default">
+                    <img src="assets/icons/ononon.svg" alt="Online" class="segment-icon online-selected">
+                    Online
+                  </label>
                 </div>
               </div>
-            
+              
               <div class="input-group">
                 <label for="local">Local</label>
                 <input type="text" id="local" name="local" placeholder="Link ou endereço" required>

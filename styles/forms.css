@@ -1,0 +1,161 @@
+/* Formulários */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  color: var(--text-body);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 4px;
+  color: var(--text-body);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Textarea */
+textarea {
+  min-height: 130px; /* Altura mínima */
+  resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--input-placeholder);
+  opacity: 1;
+}
+
+/* Placeholder data/hora */
+input[placeholder*="DD/MM/AAAA"] {
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+input[placeholder*="DD/MM/AAAA"]::placeholder {
+  color: var(--input-placeholder);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Campos lado a lado */
+.input-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.input-row .input-group:first-child {
+  flex: 2; /* Tipo do evento */
+}
+
+.input-row .input-group:last-child {
+  flex: 2; /* Local - ocupa o dobro de espaço */
+}
+
+/* Altura input Local */
+#local {
+  height: 52px; /*valor visual dos botões */
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Segmented control */
+.segmented-control {
+  display: flex;
+  width: 100%;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+/* Esconder radio */
+.segmented-control input[type="radio"] {
+  display: none;
+}
+
+/* Botões */
+.segment-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  justify-content: center;
+  color: var(--text-body);
+  font-weight: 500;
+  border-bottom: none;
+  outline: none;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Ícones */
+.segment-icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+/* Selecionado */
+.segmented-control input[type="radio"]:checked + .segment-button {
+  background-color: var(--input-stroke);
+  color: var(--text-heading);
+  border-bottom: none;
+  margin: 0;
+  border-radius: 0;
+}
+
+.segmented-control input[type="radio"]:checked + .segment-button .segment-icon {
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Ícones Online */
+.online-selected {
+  display: none;
+}
+
+.online-default {
+  display: block;
+}
+
+/* Mostrar ícone selecionado */
+.segmented-control input[type="radio"]:checked + .segment-button[for="online"] .online-selected {
+  display: block;
+}
+
+.segmented-control input[type="radio"]:checked + .segment-button[for="online"] .online-default {
+  display: none;
+}
+
+/* Não selecionado */
+.segmented-control input[type="radio"]:not(:checked) + .segment-button {
+  background-color: transparent;
+  color: var(--text-body);
+  border-bottom: none;
+}
+
+.segmented-control input[type="radio"]:not(:checked) + .segment-button .segment-icon {
+  filter: grayscale(100%) brightness(0.7);
+}
+
+/* Hover */
+.segment-button:hover {
+  background-color: var(--input-stroke);
+}

@@ -1,0 +1,126 @@
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 820px 400px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Formulário */
+.formulario {
+  background-color: var(--shape-body);
+  padding: 3rem 2.5rem;
+  border-radius: 8px;
+  width: 820px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Título */
+.formulario h1 {
+  color: var(--text-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  position: static;
+}
+
+/* Sobre evento */
+.sobre-evento {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.sobre-evento legend {
+  display: flex;
+  align-items: center;
+  color: var(--text-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+  position: relative;
+  padding-left: 30px;
+}
+
+.sobre-evento legend::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'><path d='M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z'/></svg>");
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+/* Fieldsets */
+fieldset {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+legend {
+  color: var(--text-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Preview */
+.preview {
+  background-color: var(--shape-body);
+  padding: 2rem;
+  border-radius: 8px;
+  height: 728px;
+  width: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preview-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.confetes-icon {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  width: 45px;
+  height: 48px;
+  z-index: 10;
+}
+
+.preview-title {
+  position: absolute;
+  left: 2rem;
+  top: 6rem;
+  color: var(--pink);
+  font-family: 'Leckerli One', cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  z-index: 10;
+  margin: 0;
+}
+
+.preview-subtitle {
+  position: absolute;
+  left: 2rem;
+  top: 9rem;
+  color: var(--text-body);
+  font-size: 1rem;
+  opacity: 0.8;
+  z-index: 10;
+  margin: 0;
+}
