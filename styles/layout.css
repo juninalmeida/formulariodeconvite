@@ -48,14 +48,15 @@
 .sobre-evento legend::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: -3px;
   top: 50%;
   transform: translateY(-50%);
   width: 24px;
-  height: 24px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'><path d='M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z'/></svg>");
+  height: 28px;
+  background-image: url("../assets/contact.png");
   background-repeat: no-repeat;
   background-size: 24px;
+  object-fit: cover;
 }
 
 /* Fieldsets */
@@ -123,4 +124,65 @@ legend {
   opacity: 0.8;
   z-index: 10;
   margin: 0;
+}
+
+/* Personalização fieldset */
+fieldset.personalizacao {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.personalizacao legend {
+  display: flex;
+  align-items: center;
+  color: var(--text-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.4rem;
+  position: relative;
+  padding-left: 30px;
+}
+
+.personalizacao legend::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 28px;
+  background-image: url('../assets/colors/paintbrush.png');
+  background-repeat: no-repeat;
+  background-size: 25px;
+  object-fit: cover;
+}
+
+
+fieldset:last-of-type {
+  border: none;
+  margin-bottom: 2rem;
+}
+
+fieldset:last-of-type legend {
+  display: flex;
+  align-items: center;
+  color: var(--text-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  padding-left: 30px;
+}
+
+fieldset:last-of-type legend::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 30px;
+  background-image: url('../assets/contactc.png');
+  background-repeat: no-repeat;
+  background-size: 25px;
+  object-fit: cover;
 }

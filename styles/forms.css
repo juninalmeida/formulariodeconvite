@@ -11,6 +11,8 @@ label {
 }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
 input[type="date"],
 textarea {
   width: 100%;
@@ -31,6 +33,13 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
+  color: var(--input-placeholder);
+  opacity: 1;
+}
+
+/* Placeholder específico para E-mail e Telefone */
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
   color: var(--input-placeholder);
   opacity: 1;
 }
@@ -68,6 +77,14 @@ input[placeholder*="DD/MM/AAAA"]::placeholder {
   display: flex;
   align-items: center;
   box-sizing: border-box;
+}
+
+.preview-title {
+  margin-bottom: 2rem; 
+}
+
+.preview-subtitle {
+  margin-top: 0.8rem;
 }
 
 /* Segmented control */
@@ -158,4 +175,437 @@ input[placeholder*="DD/MM/AAAA"]::placeholder {
 /* Hover */
 .segment-button:hover {
   background-color: var(--input-stroke);
+}
+
+/* Seletor de cores */
+.color-picker {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribui uniformemente */
+  margin-top: 1.50rem; /* Espaço do label */
+}
+
+.color-picker input[type="radio"] {
+  display: none;
+}
+
+.color-option {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: block;
+  overflow: hidden;
+  flex: 0 0 32px; /* Mantém tamanho fixo */
+}
+
+.color-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+  border-color: var(--text-body);
+}
+
+.color-picker input[type="radio"]:checked + .color-option {
+  border-color: #00D4AA; /* Cor inicial */
+  transform: scale(1.15);
+  box-shadow: 0 0 0 2px rgba(0, 212, 170, 0.15);
+  animation: rainbow-border 3s ease-in-out infinite;
+  border-width: 3px;
+}
+
+
+/* Grid de temas */
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%; /* Ocupa toda a largura */
+  max-width: 100%; /* Garante que não ultrapasse */
+}
+
+.theme-grid input[type="radio"] {
+  display: none;
+}
+
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  padding: 0rem;
+  background-color: var(--input-base);
+  border: 2px solid var(--input-stroke);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-height: 96px; /* Altura mínima para todos ficarem iguais */
+  width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.theme-option img {
+  width: 170px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 5px; /* Cantos um pouco menos arredondados */
+  margin-bottom: 0.5rem; /* Reduz o espaço entre imagem e texto */
+}
+
+.theme-option span {
+  color: var(--text-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.theme-option:hover {
+  border-color: var(--text-body);
+  transform: translateY(-2px);
+}
+
+.theme-grid input[type="radio"]:checked + .theme-option {
+  border-color: #00D4AA; /* Cor inicial */
+  background-color: var(--input-stroke);
+  transform: scale(1.02);
+  box-shadow: 0 0 0 2px rgba(0, 212, 170, 0.15);
+  animation: rainbow-border 3s ease-in-out infinite; /* Animação RGB */
+}
+
+/* Toggle switch estilo */
+.toggle-container {
+  margin-top: 0.75rem;
+}
+
+.toggle-container input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  /* Removido: padding, background-color, border, border-radius */
+}
+
+.toggle-switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: var(--input-stroke);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--text-body);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggle-text {
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+/* Toggle switch estilo - sem container quadrado */
+.toggle-container {
+  margin-top: 1rem;
+}
+
+.toggle-container input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 45px;
+  height: 25px;
+  background-color: var(--input-stroke);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-body);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.toggle-text {
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+/* Estado padrão */
+.escuro-text {
+  display: block;
+}
+
+.claro-text {
+  display: none;
+}
+
+.toggle-option:hover {
+  background-color: transparent; /* Remove o fundo estranho */
+}
+
+.toggle-option:hover .toggle-switch {
+  border-color: #00D4AA;
+  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.8);
+  animation: rainbow-toggle 3s ease-in-out infinite;
+}
+
+/* Estado selecionado */
+.toggle-container input[type="checkbox"]:checked + .toggle-option .toggle-switch {
+  background-color: var(--brand-mid);
+}
+
+.toggle-container input[type="checkbox"]:checked + .toggle-option .toggle-slider {
+  transform: translateX(20px);
+}
+
+.toggle-container input[type="checkbox"]:checked + .toggle-option .escuro-text {
+  display: none;
+}
+
+.toggle-container input[type="checkbox"]:checked + .toggle-option .claro-text {
+  display: block;
+}
+
+.toggle-container input[type="checkbox"]:checked + .toggle-option .toggle-text {
+  color: var(--text-heading);
+}
+
+/* Linha com Estilo e Foto de capa lado a lado */
+.style-upload-row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.style-upload-row .input-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.style-upload-row .input-group label {
+  margin-bottom: 0.75rem;
+}
+
+
+/* Upload de arquivo */
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.upload-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0rem;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  border-radius: 7px;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.upload-button:hover {
+  background-color: var(--input-stroke);
+  border-color: var(--text-body);
+  border-color: #00D4AA;
+  box-shadow: 0 0 0 2px rgba(0, 212, 170, 0.15);
+  animation: rainbow-border 3s ease-in-out infinite;
+}
+
+.upload-button img {
+  width: 110px;
+  height: 30px;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.file-status {
+  color: var(--input-placeholder);
+  font-size: 0.9rem;
+  margin-top: -0.8rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.preview {
+  position: relative;
+  animation: energy-border 4s linear infinite;
+}
+
+/* Checkbox customizado com imagens */
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-custom {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('../assets/quadrado.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.checkbox-item input[type="checkbox"]:checked + label .checkbox-custom {
+  background-image: url('../assets/check.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox-item label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  cursor: pointer;
+  margin: 0;
+}
+
+.checkbox-item a {
+  color: var(--brand-light);
+  text-decoration: underline;
+}
+
+/* Separador sutil */
+.separator {
+  height: 1px;
+  background-color: var(--input-stroke);
+  margin: 2rem 0;
+  opacity: 0.3;
+  animation: rainbow-separator 4s linear infinite;
+}
+
+/* Grupo de checkboxes */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Botão Gerar Convite */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.generate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.generate-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  animation: rainbow-button 2s ease-in-out infinite;
+}
+
+.generate-button img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  border-radius: 8px;
+  display: block;
+}
+/* Mensagens de erro */
+.error-message {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.error-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Campo com erro */
+.input-group.error input {
+  border-color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+.input-group.error .error-message {
+  display: flex;
+}
+
+/* Validação automática com CSS */
+input:invalid:not(:placeholder-shown) {
+  border-color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+}
+
+input:invalid:not(:placeholder-shown) + .error-message {
+  display: flex;
 }

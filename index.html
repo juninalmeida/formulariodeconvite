@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
@@ -67,14 +70,254 @@
             </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="personalizacao">
             <legend>Personalização</legend>
-            <!-- TODO: Campos do evento -->
+            <!-- Cor principal -->
+            <div class="input-group">
+              <label>Cor principal</label>
+              <div class="color-picker">
+                <input type="radio" id="cor-azul" name="cor-principal" value="azul">
+                <label for="cor-azul" class="color-option">
+                  <img src="assets/colors/azul.png" alt="Azul">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-azulescuro" name="cor-principal" value="azulescuro">
+                <label for="cor-azulescuro" class="color-option">
+                  <img src="assets/colors/azulescuro.png" alt="Azul escuro">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-roxo" name="cor-principal" value="roxo">
+                <label for="cor-roxo" class="color-option">
+                  <img src="assets/colors/roxo.png" alt="Roxo">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-rosa" name="cor-principal" value="rosa">
+                <label for="cor-rosa" class="color-option">
+                  <img src="assets/colors/rosa.png" alt="Rosa">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-rosaclaro" name="cor-principal" value="rosaclaro">
+                <label for="cor-rosaclaro" class="color-option">
+                  <img src="assets/colors/rosaclaro.png" alt="Rosa claro">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-vermelho" name="cor-principal" value="vermelho">
+                <label for="cor-vermelho" class="color-option">
+                  <img src="assets/colors/vermelho.png" alt="Vermelho">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-laranja" name="cor-principal" value="laranja">
+                <label for="cor-laranja" class="color-option">
+                  <img src="assets/colors/laranja.png" alt="Laranja">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-amarelo" name="cor-principal" value="amarelo">
+                <label for="cor-amarelo" class="color-option">
+                  <img src="assets/colors/amarelo.png" alt="Amarelo">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-verde" name="cor-principal" value="verde">
+                <label for="cor-verde" class="color-option">
+                  <img src="assets/colors/verde.png" alt="Verde">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-verdeescuro" name="cor-principal" value="verdeescuro" checked>
+                <label for="cor-verdeescuro" class="color-option">
+                  <img src="assets/colors/verdeescuro.png" alt="Verde escuro">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+                
+                <input type="radio" id="cor-ciano" name="cor-principal" value="ciano">
+                <label for="cor-ciano" class="color-option">
+                  <img src="assets/colors/ciano.png" alt="Ciano">
+                  <img src="assets/true.png" alt="Selecionado" class="check-icon">
+                </label>
+
+              <!-- Tema do evento -->
+              <div class="input-group">
+                <label>Tema do evento</label>
+                <div class="theme-grid">
+                  <input type="radio" id="tema-aniversario" name="tema-evento" value="aniversario" checked>
+                  <label for="tema-aniversario" class="theme-option">
+                    <img src="assets/tems/tema.png" alt="Aniversário">
+                    <span>Aniversário</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-infantil" name="tema-evento" value="infantil">
+                  <label for="tema-infantil" class="theme-option">
+                    <img src="assets/tems/temab.png" alt="Infantil">
+                    <span>Infantil</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-formatura" name="tema-evento" value="formatura">
+                  <label for="tema-formatura" class="theme-option">
+                    <img src="assets/tems/temac.png" alt="Formatura">
+                    <span>Formatura</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-casamento" name="tema-evento" value="casamento">
+                  <label for="tema-casamento" class="theme-option">
+                    <img src="assets/tems/temad.png" alt="Casamento">
+                    <span>Casamento</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-cha-bebe" name="tema-evento" value="cha-bebe">
+                  <label for="tema-cha-bebe" class="theme-option">
+                    <img src="assets/tems/e.png" alt="Chá de bebê">
+                    <span>Chá de bebê</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-cha-panela" name="tema-evento" value="cha-panela">
+                  <label for="tema-cha-panela" class="theme-option">
+                    <img src="assets/tems/f.png" alt="Chá de panela">
+                    <span>Chá de panela</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-carnaval" name="tema-evento" value="carnaval">
+                  <label for="tema-carnaval" class="theme-option">
+                    <img src="assets/tems/g.png" alt="Carnaval">
+                    <span>Carnaval</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-pascoa" name="tema-evento" value="pascoa">
+                  <label for="tema-pascoa" class="theme-option">
+                    <img src="assets/tems/h.png" alt="Páscoa">
+                    <span>Páscoa</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-sao-joao" name="tema-evento" value="sao-joao">
+                  <label for="tema-sao-joao" class="theme-option">
+                    <img src="assets/tems/i.png" alt="São João">
+                    <span>São João</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-halloween" name="tema-evento" value="halloween">
+                  <label for="tema-halloween" class="theme-option">
+                    <img src="assets/tems/j.png" alt="Halloween">
+                    <span>Halloween</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-natal" name="tema-evento" value="natal">
+                  <label for="tema-natal" class="theme-option">
+                    <img src="assets/tems/k.png" alt="Natal">
+                    <span>Natal</span>
+                  </label>
+                  
+                  <input type="radio" id="tema-outro" name="tema-evento" value="outro">
+                  <label for="tema-outro" class="theme-option">
+                    <img src="assets/tems/l.png" alt="Outro">
+                    <span>Outro</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Estilo e Foto de capa lado a lado -->
+            <div class="style-upload-row">
+              <!-- Estilo -->
+              <div class="input-group">
+                <label>Estilo</label>
+                <div class="toggle-container">
+                  <input type="checkbox" id="estilo-escuro" name="estilo-escuro">
+                  <label for="estilo-escuro" class="toggle-option">
+                    <div class="toggle-switch">
+                      <span class="toggle-slider"></span>
+                    </div>
+                    <span class="toggle-text escuro-text">Escuro</span>
+                    <span class="toggle-text claro-text">Claro</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Foto de capa -->
+              <div class="input-group">
+                <label>Foto de capa</label>
+                <div class="file-upload">
+                  <input type="file" id="foto-capa" name="foto-capa" accept="image/*" hidden>
+                  <label for="foto-capa" class="upload-button">
+                    <img src="assets/button.png" alt="Upload">
+                  </label>
+                  <span class="file-status">Nenhum arquivo selecionado</span>
+                </div>
+              </div>
+            </div>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="dados-contato">
             <legend>Dados para contato</legend>
-            <!-- TODO: Campos do evento -->
+            
+            <!-- Campo Nome -->
+            <div class="input-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+              <div class="error-message" id="nome-error">
+                <img src="assets/alert.png" alt="Alerta" class="error-icon">
+                <span>Campo obrigatório</span>
+              </div>
+            </div>
+            
+            <!-- E-mail e Telefone lado a lado -->
+            <div class="input-row">
+              <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+                <div class="error-message" id="email-error">
+                  <img src="assets/alert.png" alt="Alerta" class="error-icon">
+                  <span>Campo obrigatório</span>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
+                <div class="error-message" id="telefone-error">
+                  <img src="assets/alert.png" alt="Alerta" class="error-icon">
+                  <span>Campo obrigatório</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Linha sutil -->
+            <div class="separator"></div>
+            
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for="termos">
+                  <span class="checkbox-custom"></span>
+                  Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de Privacidade</a>
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="email-updates" name="email-updates">
+                <label for="email-updates">
+                  <span class="checkbox-custom"></span>
+                  Aceito receber atualizações e promoções por e-mail
+                </label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="sms-updates" name="sms-updates">
+                <label for="sms-updates">
+                  <span class="checkbox-custom"></span>
+                  Aceito receber atualizações e promoções por SMS
+                </label>
+              </div>
+            </div>
+            
+            <!-- Botão Gerar Convite -->
+            <div class="button-group">
+              <button type="submit" class="generate-button">
+                <img src="assets/convitebutton.png" alt="Gerar convite">
+              </button>
+            </div>
           </fieldset>
         </form>
       </section>

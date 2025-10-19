@@ -22,3 +22,99 @@ textarea:focus {
   100% { border-color: #FF6B6B; box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.15); }
 }
 
+/* Animação RGB específica só para o toggle */
+
+@keyframes rainbow-toggle {
+  0% { border-color: #FF6B6B; box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.7); }
+  16% { border-color: #FF8E53; box-shadow: 0 0 0 3px rgba(255, 142, 83, 0.7); }
+  33% { border-color: #FFD93D; box-shadow: 0 0 0 3px rgba(255, 217, 61, 0.7); }
+  50% { border-color: #6BCF7F; box-shadow: 0 0 0 3px rgba(107, 207, 127, 0.7); }
+  66% { border-color: #4D96FF; box-shadow: 0 0 0 3px rgba(77, 150, 255, 0.7); }
+  83% { border-color: #9B59B6; box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.7); }
+  100% { border-color: #FF6B6B; box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.7); }
+}
+
+/* Animação RGB Para a imagem do background */
+
+@keyframes energy-border {
+  0% {
+    box-shadow: 
+      0 0 0 2px #00D4AA,
+      0 0 20px #00D4AA,
+      inset 0 0 20px rgba(0, 212, 170, 0.1);
+  }
+  25% {
+    box-shadow: 
+      0 0 0 2px #4D96FF,
+      0 0 20px #4D96FF,
+      inset 0 0 20px rgba(77, 150, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 0 2px #FF6B9D,
+      0 0 20px #FF6B9D,
+      inset 0 0 20px rgba(255, 107, 157, 0.1);
+  }
+  75% {
+    box-shadow: 
+      0 0 0 2px #FFD93D,
+      0 0 20px #FFD93D,
+      inset 0 0 20px rgba(255, 217, 61, 0.1);
+  }
+  100% {
+    box-shadow: 
+      0 0 0 2px #00D4AA,
+      0 0 20px #00D4AA,
+      inset 0 0 20px rgba(0, 212, 170, 0.1);
+  }
+}
+
+/* Animação RGB específica para o botão Gerar Convite */
+@keyframes rainbow-button {
+  0% { box-shadow: 0 0 0 2px #FF6B6B, 0 0 8px rgba(255, 107, 107, 0.4); }
+  16% { box-shadow: 0 0 0 2px #FF8E53, 0 0 8px rgba(255, 142, 83, 0.4); }
+  33% { box-shadow: 0 0 0 2px #FFD93D, 0 0 8px rgba(255, 217, 61, 0.4); }
+  50% { box-shadow: 0 0 0 2px #6BCF7F, 0 0 8px rgba(107, 207, 127, 0.4); }
+  66% { box-shadow: 0 0 0 2px #4D96FF, 0 0 8px rgba(77, 150, 255, 0.4); }
+  83% { box-shadow: 0 0 0 2px #9B59B6, 0 0 8px rgba(155, 89, 182, 0.4); }
+  100% { box-shadow: 0 0 0 2px #FF6B6B, 0 0 8px rgba(255, 107, 107, 0.4); }
+}
+
+/* Animação RGB elegante para o separador */
+@keyframes rainbow-separator {
+  0% { 
+    background: linear-gradient(90deg, #FF6B6B, #FF8E53, #FFD93D, #6BCF7F, #4D96FF, #9B59B6);
+    background-size: 300% 100%;
+    background-position: 0% 50%;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+    opacity: 1;
+  }
+  25% { 
+    background: linear-gradient(90deg, #FF8E53, #FFD93D, #6BCF7F, #4D96FF, #9B59B6, #FF6B6B);
+    background-size: 300% 100%;
+    background-position: 25% 50%;
+    box-shadow: 0 0 15px rgba(255, 142, 83, 0.6);
+    opacity: 1;
+  }
+  50% { 
+    background: linear-gradient(90deg, #FFD93D, #6BCF7F, #4D96FF, #9B59B6, #FF6B6B, #FF8E53);
+    background-size: 300% 100%;
+    background-position: 50% 50%;
+    box-shadow: 0 0 15px rgba(255, 217, 61, 0.6);
+    opacity: 1;
+  }
+  75% { 
+    background: linear-gradient(90deg, #6BCF7F, #4D96FF, #9B59B6, #FF6B6B, #FF8E53, #FFD93D);
+    background-size: 300% 100%;
+    background-position: 75% 50%;
+    box-shadow: 0 0 15px rgba(107, 207, 127, 0.6);
+    opacity: 1;
+  }
+  100% { 
+    background: linear-gradient(90deg, #4D96FF, #9B59B6, #FF6B6B, #FF8E53, #FFD93D, #6BCF7F);
+    background-size: 300% 100%;
+    background-position: 100% 50%;
+    box-shadow: 0 0 15px rgba(77, 150, 255, 0.6);
+    opacity: 1;
+  }
+}
